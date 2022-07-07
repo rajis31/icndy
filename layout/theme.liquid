@@ -7,13 +7,19 @@
   <meta name="description" content="{{ page_description | escape }}">
   <link rel="canonical" href="{{ canonical_url }}">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.css' | asset_url | stylesheet_tag }}
   {{ 'application.js' | asset_url | script_tag }}
 </head>
 <body>
 
-  {% for link in linklists.main-menu.links %}
+  <!-- Header  -->
+
+  <div class="header">
+    {% for link in linklists.main-menu.links %}
     {% assign child_list_handle = link.title | handleize %}
     {% if linklists[child_list_handle].links != blank %}
       <a href="{{ link.url }}">{{ link.title }}</a>
@@ -24,21 +30,46 @@
       <a href="{{ link.url }}">{{ link.title }}</a>
     {% endif %}
   {% endfor %}
-
-  <a href="/cart">cart</a>
-
   {% if shop.customer_accounts_enabled %}
-    {% if customer %}
-      <a href="/account">account</a>
-      {{ 'log out'  | customer_logout_link }}
-    {% else %}
-      {{ 'log in ' | customer_login_link }}
-      {{ 'register' | customer_register_link }}
-    {% endif %}
+  {% if customer %}
+    <a href="/account">account</a>
+    {{ 'log out'  | customer_logout_link }}
+  {% else %}
+    {{ 'log in ' | customer_login_link }}
+    {{ 'register' | customer_register_link }}
   {% endif %}
+{% endif %}
+  </div>
+ 
 
   <main role="main">
     {{ content_for_layout }}
   </main>
+
+  <div class="hero">
+    <div class="hero__img">
+      {{ 'header.jpg' | asset_url | img_tag: 'Header' }}
+    </div>
+    <div class="hero__logo">
+      <p>ICNDY</p>
+    </div>
+    <div class="hero__menu">
+      <div class="hero__menu-option">Mens</div>
+      <div class="hero__menu-option">Womens</div>
+      <div class="hero__menu-option">Brands</div>
+      <div class="hero__menu-option">Sale</div>
+      <div class="hero__menu-option">News</div>
+    </div>
+
+    <div class="hero__info">
+        <p>STÜSSY2014</p>
+        <p>SHOP NOW</p>
+    </div>
+
+    <div class="hero__down">
+      <p>v</p>
+    </div>
+  </div>
+
 </body>
 </html>

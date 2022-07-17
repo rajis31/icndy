@@ -17,7 +17,6 @@
 <body>
 
   <!-- Header  -->
-
   <div class="header">
     {% for link in linklists.main-menu.links %}
     {% assign child_list_handle = link.title | handleize %}
@@ -40,7 +39,7 @@
   {% endif %}
 {% endif %}
   </div>
- 
+
 
   <main role="main">
     {{ content_for_layout }}
@@ -74,6 +73,40 @@
       <p>v</p>
     </div>
   </div>
+
+    <!-- Product Grid -->
+    <div class="product__grid">
+      <div class="gourmet product__grid-item">
+        {{ 'gourmet.jpg' | asset_url | img_tag: 'Gourmet' }}
+        {{ 'GOURMET SYMBOL.png' | asset_url | img_tag: 'Gourmet Symbol' }}
+        <p class="product__grid-item-description">SHOP GOURMET</p>
+      </div>
+       <div class="gourmet product__grid-item">
+        {{ 'carhatt.jpg' | asset_url | img_tag: 'Carhatt' }}
+        {{ 'CARHATT SYMBOL.png' | asset_url | img_tag: 'Carhatt Symbol' }}
+        <p class="product__grid-item-description">SHOP CARHATT</p>
+      </div>
+      <div class="gourmet product__grid-item">
+        {{ 'adidas.jpg' | asset_url | img_tag: 'Adidas' }}
+        {{ 'ADIDAS SYMBOL.png' | asset_url | img_tag: 'Adidas Symbol' }}
+        <p class="product__grid-item-description">SHOP ADIDAS</p>
+      </div>
+      <div class="gourmet product__grid-item">
+        {{ '10Deep.jpg' | asset_url | img_tag: '10Deep' }}
+        {{ '10DEEP SYMBOL.png' | asset_url | img_tag: '10Deep Symbol' }}
+        <p class="product__grid-item-description">10DEEP SALE</p>
+      </div>
+      <div class="gourmet product__grid-item">
+        {{ 'palace.jpg' | asset_url | img_tag: 'Palace' }}
+        {{ 'PALACE SYMBOL.png' | asset_url | img_tag: 'Palace Symbol' }}
+        <p class="product__grid-item-description">PALACE A/W 2014</p>
+      </div>
+      <div class="gourmet product__grid-item">
+        {{ 'nike.jpg' | asset_url | img_tag: 'Nike' }}
+        {{ 'NIKE SYMBOL.png' | asset_url | img_tag: 'Nike Symbol' }}
+        <p class="product__grid-item-description">TECH PACK</p>
+      </div>
+    </div>
 
 </body>
 </html>

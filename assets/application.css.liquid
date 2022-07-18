@@ -4,25 +4,26 @@
 
 /*== Header ===*/
 
-.header{
+.header {
     display: none;
 }
 
 /*== Hero ===*/
 
-.hero{
+.hero {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     width: 100%;
 }
-.hero img{
+
+.hero img {
     width: 100vw;
     height: calc(100vh + 10px);
     object-fit: fill;
     margin-top: -10px;
 }
 
-.hero__logo{
+.hero__logo {
     background-color: #fff;
     color: #787876;
     display: flex;
@@ -46,7 +47,8 @@
     width: fit-content;
     letter-spacing: 15px;
 }
-.hero__menu{
+
+.hero__menu {
     position: absolute;
     top: 50px;
     right: 0;
@@ -66,16 +68,17 @@
     font-weight: 500;
     letter-spacing: 5px;
 }
-.hero__info{
+
+.hero__info {
     position: absolute;
     top: 55%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
 }
 
-.hero__info p:first-child{
+.hero__info p:first-child {
     font-size: 3.5rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -83,7 +86,7 @@
     margin-bottom: 20px;
 }
 
-.hero__info p:nth-child(2){
+.hero__info p:nth-child(2) {
     color: #f84545;
     margin-top: 0px;
     font-size: 2rem;
@@ -96,7 +99,7 @@
     position: absolute;
     top: 90%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 5rem;
     color: #fff;
     font-weight: 200;
@@ -105,30 +108,61 @@
     text-align: center;
 }
 
-.hero__down p{
-    transform: scale(1.5,1);
+.hero__down p {
+    transform: scale(1.5, 1);
 }
 
 /*=== Product Grid ===*/
-.product__grid{
+.product__grid {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-left: 50px;
     margin-right: 50px;
     grid-gap: 20px;
 }
-.product__grid-item img{
-    max-width: 100%;
-    overflow: hidden;
-}   
 
-.gourmet{
+.product__grid-item img {
+    max-width: 100%;
+    object-fit: fill;
+}
+
+.product__grid span,
+.product__grid p {
+    position: absolute;
+}
+.product__grid-item span{
+    position: absolute;
+}
+
+.product__grid-item-description{
+    color: #fff;
+    font-size: 48px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.gourmet {
     position: relative;
     grid-column: span 2;
     grid-row: span 2;
 }
-.carhatt, .adidas{
+
+.gourmet .symbol {
+    top: 50%;
+    left: 30px;
+}
+.gourmet .product__grid-item-description{
+    top: 90%;
+}
+
+.carhatt, .adidas {
     grid-column: span 1;
     grid-row: span 1;
+}
+
+.carhatt .symbol {
+    top: 50%;
+    left: 30px;
 }

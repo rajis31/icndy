@@ -114,6 +114,7 @@
 
 /*=== Product Grid ===*/
 .product__grid {
+    font-family: 'Roboto', sans-serif;
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -127,21 +128,28 @@
     object-fit: fill;
 }
 
-.product__grid span,
-.product__grid p {
-    position: absolute;
-}
-.product__grid-item span{
+.product__grid span {
     position: absolute;
 }
 
-.product__grid-item-description{
+.product__grid-item {
+    position: relative;
+}
+
+.product__grid-item span {
+    position: absolute;
+}
+
+.product__grid-item-description {
     color: #fff;
     font-size: 48px;
-    letter-spacing: 5px;
+    letter-spacing: 20px;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
+    left: 50px;
+    position: absolute;
 }
+
 
 .gourmet {
     position: relative;
@@ -153,8 +161,9 @@
     top: 50%;
     left: 30px;
 }
-.gourmet .product__grid-item-description{
-    top: 90%;
+
+.gourmet .product__grid-item-description {
+    top: 80%;
 }
 
 .carhatt, .adidas {
